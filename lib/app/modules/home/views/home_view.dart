@@ -14,6 +14,7 @@ class HomeView extends GetView<HomeController> {
       ),
       body: Column(
         children: [
+          const SizedBox(height: 20),
           // Виджет для отображения состояния игры
           Obx(() {
             String gameStateText = '';
@@ -42,7 +43,6 @@ class HomeView extends GetView<HomeController> {
               style: TextStyle(fontSize: 20),
             );
           }),
-          const SizedBox(height: 10),
           // Игровое поле
           Expanded(
             child: Center(
@@ -89,6 +89,7 @@ class HomeView extends GetView<HomeController> {
             },
             child: const Text('Начать заново'),
           ),
+          const SizedBox(height: 20),
         ],
       ),
     );
