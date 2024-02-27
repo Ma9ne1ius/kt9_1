@@ -42,7 +42,7 @@ class HomeView extends GetView<HomeController> {
               style: TextStyle(fontSize: 20),
             );
           }),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           // Игровое поле
           Expanded(
             child: Center(
@@ -68,9 +68,9 @@ class HomeView extends GetView<HomeController> {
                           () {
                             final value = controller.gameBoard[index];
                             if (value == 1) {
-                              return const Icon(Icons.close, size: 48);
+                              return const Icon(Icons.close, size: 48,color: Color.fromARGB(255, 255, 17, 0),);
                             } else if (value == -1) {
-                              return const Icon(Icons.circle, size: 48);
+                              return const Icon(Icons.circle, size: 48,color: Color.fromARGB(255, 0, 90, 163),);
                             } else {
                               return const SizedBox.shrink();
                             }
